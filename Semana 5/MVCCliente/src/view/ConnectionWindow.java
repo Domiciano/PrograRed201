@@ -47,6 +47,12 @@ public class ConnectionWindow extends Stage{
 	public TextField getTfPort() {
 		return tfPort;
 	}
+
+	public Label getLabelInstructions() {
+		return labelInstructions;
+	}
+	
+	
 	
 	
 

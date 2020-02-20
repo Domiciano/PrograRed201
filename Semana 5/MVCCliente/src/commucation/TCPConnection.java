@@ -12,6 +12,8 @@ import java.net.Socket;
 
 public class TCPConnection {
 	
+	private OnConnectionListener listener;
+	
 	private static TCPConnection instance;
 	
 	private int puerto;
@@ -29,6 +31,10 @@ public class TCPConnection {
 		return instance;
 	}
 	
+	public void setListener(OnConnectionListener listener) {
+		this.listener = listener;
+	}
+	
 	private TCPConnection() {}
 	
 	public void setPuerto(int puerto) {
@@ -40,20 +46,24 @@ public class TCPConnection {
 	}
 	
 	public void requestConnection() {
-		try {
-			this.socket = new Socket(serverIp, puerto);
-			System.out.println("Conexión establecida");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		new Thread(
+				()->{
+					try {
+						this.socket = new Socket(serverIp, puerto);
+						System.out.println("Conexión establecida");
+						if(listener != null) listener.onConnection("OK");
+					} catch (IOException e) {
+						System.out.println(e.getMessage());
+						if(listener != null) listener.onConnection("ERROR");
+					}
+				}
+		).start();
 	}
 	
 	
 	
 	public void initReceiver() {
 		receiver = new Receiver(socket);
-		receiver.setObserver(client);
 	}
 	
 	
@@ -70,10 +80,6 @@ public class TCPConnection {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-
-	public void setObserver(Client client) {
-		this.client = client;
 	}
 
 	public Receiver getReceiver() {
