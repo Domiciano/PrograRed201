@@ -8,6 +8,9 @@ Bienvenido al curso de Programación en red. Aquí podrá encontrar los recursos
 	.\programacion:Programacion20201
 -->
 
+### Parcial Teórico 1
+[![Examen de prerrequisitos](http://www.iconninja.com/files/825/688/946/pencil-list-done-checkmark-todo-exam-icon.png)](https://forms.gle/at78fAMtGC8JWPiPA)
+
 ### Enlace al Scene Builder
 [Scene Builder by Gluon](https://gluonhq.com/products/scene-builder/)
 
