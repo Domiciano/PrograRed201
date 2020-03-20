@@ -8,6 +8,9 @@ Bienvenido al curso de Programación en red. Aquí podrá encontrar los recursos
 	.\programacion:Programacion20201
 -->
 
+### Datos para ejemplo de computacion distribuida
+https://drive.google.com/open?id=14iq-OjH-StJMLUh4EIttW3casw2O6Vu4
+
 ### Parcial Teórico 1
 [![Examen de prerrequisitos](http://www.iconninja.com/files/825/688/946/pencil-list-done-checkmark-todo-exam-icon.png)](https://forms.gle/at78fAMtGC8JWPiPA)
 
