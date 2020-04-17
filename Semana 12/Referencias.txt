@@ -1,0 +1,9 @@
+Desplegar JAVA APPS con maven
+
+https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin
+
+Desplegar desde intelliJ
+
+https://devcenter.heroku.com/articles/deploying-java-applications-to-heroku-from-eclipse-or-
+intellij-idea
+
